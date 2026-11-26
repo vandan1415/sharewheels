@@ -1,0 +1,11 @@
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+import { formatCurrencyINR } from '@/i18n/dynamic';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+export function formatINR(amount: number): string {
+  return formatCurrencyINR(amount);
+}
